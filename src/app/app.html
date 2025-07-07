@@ -1,2 +1,20 @@
-<h1>Hello</h1>
-{{title}}
+<h1>Welcome to Counter App</h1>
+<h2>{{username}}</h2>
+<!-- <app-login></app-login> -->
+<!-- <app-profile></app-profile> -->
+<!-- <h2>Function call on button</h2> -->
+<!-- <button (click)="handleClickEvent()">click me</button> -->
+<!-- <button (click)="handleSum(10,20)">sum</button> -->
+<input value={{username}} (input)="getUserName($event)" type="text" #userNameField placeholder="enter your user name">
+<br>
+<br>
+<button (click)="setUserName()"> SET</button>
+<button (click)="getUserNamewithTemplate(userNameField.value)"> GET</button>
+<div style="text-align: center;"> 
+    <h3 class="count">{{count}}</h3>
+    <div>
+        <button (click)="handleCounter('minus')" class="btn bg-red">Decrement</button>
+        <button (click)="handleCounter('reset')" class="btn bg-black">Reset</button>
+        <button (click)="handleCounter('plus')" class="btn bg-green">Incrememt</button>
+    </div>
+</div>
